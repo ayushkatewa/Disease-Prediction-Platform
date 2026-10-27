@@ -331,3 +331,26 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 <div align="center">
   <b>Built for Cluster Computing & Clinical AI Research</b> • Apache Spark 4.2.0 • FastAPI • Streamlit
 </div>
+
+---
+
+## 🧪 Automated Testing
+
+Run the test suite to validate data integrity, Scikit-Learn pipeline, ModelService validation, API routes, and Spark pipeline:
+
+```bash
+pytest tests/test_pipeline.py -v
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <b>Built for Cluster Computing & Clinical AI Research</b> • Apache Spark 4.2.0 • FastAPI • Streamlit
+</div>
+

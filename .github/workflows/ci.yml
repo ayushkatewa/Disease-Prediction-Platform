@@ -44,3 +44,4 @@ jobs:
     - name: Run Automated Test Suite
       run: |
         pytest tests/test_pipeline.py -v
+
