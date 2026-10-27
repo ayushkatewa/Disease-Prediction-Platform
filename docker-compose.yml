@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: diabetes_dashboard
+    command: python run.py web --port 8501
+    ports:
+      - "8501:8501"
+    environment:
+      - STREAMLIT_PORT=8501
+      - SPARK_MASTER=local[*]
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    restart: unless-stopped
+
+  api:
+    build: .
+    container_name: diabetes_api
+    command: python run.py api --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      - API_PORT=8000
+      - API_HOST=0.0.0.0
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    restart: unless-stopped
+
